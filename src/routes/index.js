@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import ErrorPage from '../components/error-page';
 import Home from '../components/home';
+import Counter from '../components/counter';
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ export const router = createBrowserRouter([
   {
     path: '/about',
     element: <h2>About</h2>,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/counter',
+    element: <Counter />,
     errorElement: <ErrorPage />
   }
 ])
